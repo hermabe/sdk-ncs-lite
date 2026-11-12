@@ -182,13 +182,13 @@ static uint32_t peer_manager_init(void)
 	uint32_t nrf_err;
 	ble_gap_sec_params_t sec_param = {
 		.bond = 1,
-		.mitm = 0,
-		.lesc = 1,
+		.mitm = BLE_GAP_DEFAULT_MITM,
+		.lesc = BLE_GAP_DEFAULT_LESC,
 		.keypress = 0,
 		.io_caps = BLE_GAP_IO_CAPS_NONE,
 		.oob = 0,
-		.min_key_size = 16,
-		.max_key_size = 16,
+		.min_key_size = BLE_GAP_DEFAULT_KEY_SIZE,
+		.max_key_size = BLE_GAP_DEFAULT_KEY_SIZE,
 		.kdist_own.enc = 1,
 		.kdist_own.id = 1,
 		.kdist_peer.enc = 1,
